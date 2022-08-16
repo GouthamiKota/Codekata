@@ -1,0 +1,2 @@
+# Codekata
+PythonCodeKata
