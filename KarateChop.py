@@ -18,7 +18,7 @@ def chop_rec(n, array):
     return chop_rec_inter(n, array, 0, len(array) - 1)
 
 def chop_iterative(n, array):
-    "simple version with increments"
+    
     start, end = 0, (len(array) - 1)
     while True:
         if start > end:
@@ -32,17 +32,5 @@ def chop_iterative(n, array):
             end -= 1
         else:
             start += 1
-# 1 mistake:
-# - using the recursive version I'm going in max recurs depth very quickly
-# 2 mistake
-# - also using the iterative version I come into an infinite loop in the beginning
-# - getting wrong the indexing of the middle element
-# 3 mistake
-# - in the recursive version, calling chop_rec_inter in the other way around
 
-def test_chop(fun):
-    assert(fun(2, [1,2,3,4]) == 1)
-    assert(fun(4, [1,2,3,4]) == 3)
 
-test_chop(chop_iterative)        
-# print fun(2, [1,2,3,4])
